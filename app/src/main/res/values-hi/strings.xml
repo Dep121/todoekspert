@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TodoEkspert</string>
+    <string name="login">घुसें</string>
+    <string name="username">नाम डालें</string>
+    <string name="password">पासवर्ड डालें</string>
+    <string name="this_field_is_required">यह भरना जरूरी है ।</string>
+    <string name="login_ok">आइए…</string>
+</resources>
