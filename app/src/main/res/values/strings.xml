@@ -5,4 +5,7 @@
     <string name="password">Password</string>
     <string name="this_field_is_required">This field is required!</string>
     <string name="login_ok">Login OK</string>
+    <string name="action_add">Add</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_logout">Logout</string>
 </resources>

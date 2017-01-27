@@ -5,5 +5,8 @@
     <string name="username">नाम डालें</string>
     <string name="password">पासवर्ड डालें</string>
     <string name="this_field_is_required">यह भरना जरूरी है ।</string>
-    <string name="login_ok">आइए…</string>
+    <string name="login_ok">आएं…</string>
+    <string name="action_add">नया</string>
+    <string name="action_refersh">रीफेर्स</string>
+    <string name="action_logout">जाएं…</string>
 </resources>

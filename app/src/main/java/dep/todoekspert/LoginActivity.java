@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(getApplicationContext(), R.string.login_ok, Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getApplicationContext(), TodoListActivity.class);
             startActivity(intent);
+            finish();
         }
     }
 }
