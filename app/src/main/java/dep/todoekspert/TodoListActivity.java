@@ -18,9 +18,6 @@ import static android.R.id.edit;
 public class TodoListActivity extends AppCompatActivity {
     public static final int REQUEST_CODE = 123;
     ListActivity la;
-    private CheckBox doneCheckBox;
-    private EditText contentEditText;
-    private Button saveButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +56,7 @@ public class TodoListActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == REQUEST_CODE){
             if (resultCode == RESULT_OK){
-                Toast.makeText(getApplication(), "Result OK", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Result OK :" + data.getStringExtra(AddTodoActivity.CONTENT), Toast.LENGTH_SHORT).show();
             }
             else if (resultCode == RESULT_CANCELED){
                 Toast.makeText(getApplicationContext(), "Result Cancled", Toast.LENGTH_SHORT).show();

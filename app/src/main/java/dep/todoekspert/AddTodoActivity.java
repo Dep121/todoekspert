@@ -1,5 +1,6 @@
 package dep.todoekspert;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.EditText;
 
 public class AddTodoActivity extends AppCompatActivity {
 
+    public static final String ISDONE = "isdone";
+    public static final String CONTENT = "content";
     private EditText contentEditText;
     private CheckBox doneCheckBox;
     private Button saveButton;
@@ -27,7 +30,10 @@ public class AddTodoActivity extends AppCompatActivity {
                 String content = contentEditText.getText().toString();
                 boolean isdone = doneCheckBox.isChecked();
 
-                setResult(RESULT_OK);
+                Intent intent = new Intent();
+                intent.putExtra(CONTENT, content);
+                intent.putExtra(ISDONE, isdone);
+                setResult(RESULT_OK, intent);
                 finish();
             }
         });
