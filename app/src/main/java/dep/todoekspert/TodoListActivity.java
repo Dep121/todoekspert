@@ -32,6 +32,12 @@ public class TodoListActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
+        else if (id == R.id.action_add)
+        {
+            Intent intent = new Intent(getApplicationContext(), AddTodoActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }
