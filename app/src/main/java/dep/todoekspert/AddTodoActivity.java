@@ -10,8 +10,7 @@ import android.widget.EditText;
 
 public class AddTodoActivity extends AppCompatActivity {
 
-    public static final String ISDONE = "isdone";
-    public static final String CONTENT = "content";
+    public static final String TODO = "todo";
     private EditText contentEditText;
     private CheckBox doneCheckBox;
     private Button saveButton;
@@ -30,9 +29,12 @@ public class AddTodoActivity extends AppCompatActivity {
                 String content = contentEditText.getText().toString();
                 boolean isdone = doneCheckBox.isChecked();
 
+                Todo todo = new Todo();
+                todo.content = content;
+                todo.done = isdone;
+
                 Intent intent = new Intent();
-                intent.putExtra(CONTENT, content);
-                intent.putExtra(ISDONE, isdone);
+                intent.putExtra(TODO, todo);
                 setResult(RESULT_OK, intent);
                 finish();
             }

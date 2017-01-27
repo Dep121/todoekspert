@@ -56,7 +56,8 @@ public class TodoListActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == REQUEST_CODE){
             if (resultCode == RESULT_OK){
-                Toast.makeText(getApplicationContext(), "Result OK :" + data.getStringExtra(AddTodoActivity.CONTENT), Toast.LENGTH_SHORT).show();
+                Todo todo = (Todo) data.getSerializableExtra(AddTodoActivity.TODO);
+                Toast.makeText(getApplicationContext(), "Result OK :" + todo.content, Toast.LENGTH_SHORT).show();
             }
             else if (resultCode == RESULT_CANCELED){
                 Toast.makeText(getApplicationContext(), "Result Cancled", Toast.LENGTH_SHORT).show();
