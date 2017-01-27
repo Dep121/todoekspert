@@ -8,4 +8,7 @@
     <string name="action_add">Add</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_logout">Logout</string>
+    <string name="what_needs">What needs to be done ?</string>
+    <string name="done">Done</string>
+    <string name="save">Add Todo</string>
 </resources>

@@ -9,4 +9,7 @@
     <string name="action_add">नया</string>
     <string name="action_refersh">रीफेर्स</string>
     <string name="action_logout">जाएं…</string>
+    <string name="what_needs">What needs to be done ?</string>
+    <string name="done">Done</string>
+    <string name="save">Save</string>
 </resources>
