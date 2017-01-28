@@ -7,6 +7,7 @@ import android.support.v4.util.PatternsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,11 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = LoginActivity.class.getSimpleName();
     private Button button;
     private EditText usernameEditText;
     private EditText passwordEditText;
+    private AsyncTask<String, Integer, Boolean> asyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,17 +56,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void login(String username, String password) {
-        AsyncTask<String, Integer, Boolean> asyncTask = new AsyncTask<String, Integer, Boolean>() {
+        asyncTask = new AsyncTask<String, Integer, Boolean>() {
             @Override
             protected Boolean doInBackground(String... params) {
                 String username = params[0];
                 String password = params[1];
-                try{
-                    Thread.sleep(10000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                for (int i = 0; i < 100; ++i) {
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    publishProgress(i);
                 }
                 return username.equals("test") && password.equals("test");
+            }
+
+            @Override
+            protected void onProgressUpdate(Integer... values) {
+                super.onProgressUpdate(values);
+                Log.d(TAG, "progress: " + values[0]);
+                button.setText(String.valueOf(values[0]));
             }
 
             @Override
