@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_login"
+    android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="dep.todoekspert.LoginActivity"
-    android:orientation="vertical">
+    tools:context="dep.todoekspert.SignUpActivity"
+    android:orientation="vertical"
+    android:baselineAligned="false">
 
     <EditText
-        android:id="@+id/username_et"
+        android:id="@+id/new_username_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
         android:hint="@string/username" />
 
     <EditText
-        android:id="@+id/password_et"
+        android:id="@+id/new_password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:hint="@string/password"
         android:inputType="textPassword"/>
 
-    <Button
-        android:id="@+id/login_btn"
+    <dep.todoekspert.PreventPasteText
+        android:id="@+id/confirm_password_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/todo_button_selector_1"
-        android:text="@string/login" />
+        android:layout_marginTop="20dp"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword"/>
 
     <Button
-        android:id="@+id/signup_btn"
+        android:id="@+id/register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@drawable/todo_button_selector_1"
-        android:text="@string/signup" />
+        android:text="@string/register" />
 
 </LinearLayout>

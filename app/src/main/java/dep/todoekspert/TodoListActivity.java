@@ -6,17 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import static android.R.id.content;
-import static android.R.id.edit;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class TodoListActivity extends AppCompatActivity {
-    public static final int REQUEST_CODE = 123;
+    public static final int REQUEST_CODE_1 = 123;
     ListActivity la;
 
     @Override
@@ -38,6 +33,7 @@ public class TodoListActivity extends AppCompatActivity {
         if (id == R.id.action_logout)
         {
             finish();
+            FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
             return true;
@@ -45,7 +41,7 @@ public class TodoListActivity extends AppCompatActivity {
         else if (id == R.id.action_add)
         {
             Intent intent = new Intent(getApplicationContext(), AddTodoActivity.class);
-            startActivityForResult(intent, REQUEST_CODE);
+            startActivityForResult(intent, REQUEST_CODE_1);
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -54,7 +50,7 @@ public class TodoListActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == REQUEST_CODE){
+        if(requestCode == REQUEST_CODE_1){
             if (resultCode == RESULT_OK){
                 Todo todo = (Todo) data.getSerializableExtra(AddTodoActivity.TODO);
                 Toast.makeText(getApplicationContext(), "Result OK :" + todo.content, Toast.LENGTH_SHORT).show();

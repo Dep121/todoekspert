@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "382569347879",
+    "firebase_url": "https://todoekspert-8a3dd.firebaseio.com",
+    "project_id": "todoekspert-8a3dd",
+    "storage_bucket": "todoekspert-8a3dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382569347879:android:900a4dbb9dd53dd6",
+        "android_client_info": {
+          "package_name": "dep.todoekspert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382569347879-8q9gp9uskjclloq1ve5tkb59bnbgd53u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dep.todoekspert",
+            "certificate_hash": "28FD99B8616284763888DB32950A4A9E85875057"
+          }
+        },
+        {
+          "client_id": "382569347879-kb6g4283kgvuvl8jbrig304rv54g42br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLuwjNwFqD5Jn-Y1SfSVB_-9buOEqHKwQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382569347879-kb6g4283kgvuvl8jbrig304rv54g42br.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
